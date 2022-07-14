@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project name="DocumentSigningDemoWebApp" default="build" basedir=".">
+
+    <target name="init">
+        <property name="app-name" value="DocumentSigningDemoWebApp"/>
+        <property name="webapp-name" value="${app-name}.war"/>
+        <property name="src-dir" value="src"/>
+        <property name="www-dir" value="wwwroot"/>
+        <property name="classes-dir" value="${www-dir}/WEB-INF/classes"/>
+        <property name="web-xml" value="${www-dir}/WEB-INF/web.xml"/>
+        <property name="lib-dir" value="${www-dir}/WEB-INF/lib"/>
+        <property name="deploy-dir" value="deploy"/>
+    </target>
+
+    <target name="clean" depends="init">
+        <delete dir="${classes-dir}"/>
+        <mkdir dir="${classes-dir}"/>
+        <delete dir="${deploy-dir}"/>
+        <mkdir dir="${deploy-dir}"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="src"
+            destdir="wwwroot/WEB-INF/classes"
+            debug="on">
+            <classpath>
+                <fileset dir="${lib-dir}">
+                    <include name="**/*.jar"/>
+                    <include name="**/*.zip"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="war" depends="init">
+        <war compress="true" destfile="${deploy-dir}/${webapp-name}" webxml="${web-xml}" >
+            <fileset dir="${www-dir}">
+                <include name="**/*.*"/>
+            </fileset>
+        </war>
+    </target>
+
+    <target name="build">
+        <antcall target="clean"/>
+        <antcall target="compile"/>
+        <antcall target="war"/>
+    </target>
+
+</project>

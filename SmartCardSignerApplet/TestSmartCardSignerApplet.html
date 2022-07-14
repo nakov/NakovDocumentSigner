@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Test Smart Card Signer Applet</title>
+</head>
+
+<body>
+    <form name="mainForm" method="post" action="FileUploadServlet">
+        Choose file to upload and sign:
+        <input type="file" name="fileToBeSigned">
+        <br>
+        Certification chain:
+        <input type="text" name="certificationChain">
+        <br>
+        Signature:
+        <input type="text" name="signature">
+    </form>
+
+	<object
+    	classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+    	codebase="http://java.sun.com/update/1.5.0/jinstall-1_5-windows-i586.cab#Version=5,0,0,5"
+    	width="130" height="25" name="SmartCardSignerApplet">
+    	<param name="code" value="SmartCardSignerApplet">
+    	<param name="archive" value="SmartCardSignerApplet.jar">
+    	<param name="mayscript" value="true">
+	    <param name="type" value="application/x-java-applet;version=1.5">
+    	<param name="scriptable" value="false">
+	    <param name="fileNameField" value="fileToBeSigned">
+	    <param name="certificationChainField" value="certificationChain">
+	    <param name="signatureField" value="signature">
+	    <param name="signButtonCaption" value="Sign selected file">
+
+	    <comment>
+			<embed
+	            type="application/x-java-applet;version=1.5"
+	            code="SmartCardSignerApplet" archive="SmartCardSignerApplet.jar"
+	            width="130" height="25" scriptable="true"
+		    	pluginspage="http://java.sun.com/products/plugin/index.html#download"
+	            fileNameField="fileToBeSigned"
+	            certificationChainField="certificationChain"
+	            signatureField="signature"
+	            signButtonCaption="Sign selected file">
+			</embed>
+		    <noembed>
+	            Smart card signing applet can not be started because
+	            Java Plugin 1.5 or newer is not installed.
+	        </noembed>
+	    </comment>
+	</object>
+
+    <!------------------------ old applet tag - don't use it! ------------------------
+    <applet name="signApplet"
+        archive="SmartCardSignerApplet.jar"
+        code="SmartCardSignerApplet"
+        width="130" height="25" mayscript
+        fileNameField="fileToBeSigned"
+        certificationChainField="certificationChain"
+        signatureField="signature"
+        signButtonCaption="Sign selected file">
+    </applet>
+    --------------------------------------------------------------------------------->
+
+</body>
+
+</html>

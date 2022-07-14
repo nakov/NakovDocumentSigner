@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Test Document Signer Applet</title>
+</head>
+
+<body>
+    <form name="mainForm" method="post" action="FileUploadServlet">
+        Choose file to upload and sign:
+        <input type="file" name="fileToBeSigned">
+        <br>
+        Certification chain:
+        <input type="text" name="certificationChain">
+        <br>
+        Signature:
+        <input type="text" name="signature">
+    </form>
+
+	<object
+		classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+	    codebase="http://java.sun.com/products/plugin/autodl/jinstall-1_4-windows-i586.cab#Version=1,4,0,0"
+	    width="130" height="25" mayscript="true">
+	    <param name="type" value="application/x-java-applet;version=1.4">
+		<param name="code" value="DigitalSignerApplet">
+		<param name="archive" value="DigitalSignerApplet.jar">
+	    <param name="mayscript" value="true">
+	    <param name="scriptable" value="true">
+	    <param name="fileNameField" value="fileToBeSigned">
+	    <param name="certificationChainField" value="certificationChain">
+	    <param name="signatureField" value="signature">
+	    <param name="signButtonCaption" value="Sign selected file">
+	    <comment>
+		<embed
+			type="application/x-java-applet;version=1.4"
+		    pluginspage="http://java.sun.com/products/plugin/index.html#download"
+	        code="DigitalSignerApplet" archive="DigitalSignerApplet.jar"
+	        width="130" height="25"
+	        mayscript="true" scriptable="true"
+            fileNameField="fileToBeSigned"
+            certificationChainField="certificationChain"
+            signatureField="signature"
+            signButtonCaption="Sign selected file">
+		    <noembed>
+	            Document signing applet can not be started because
+	            Java Plugin 1.4 is not installed.
+	        </noembed>
+		</embed>
+	    </comment>
+	</object>
+
+    <!-------------------------- old applet tag - don't use it! --------------------------
+    <applet name="signApplet" archive="DigitalSignerApplet.jar" code="DigitalSignerApplet"
+        width="130" height="25" mayscript
+        fileNameField="fileToBeSigned"
+        certificationChainField="certificationChain"
+        signatureField="signature"
+        signButtonCaption="Sign selected file">
+    </applet>
+    ------------------------------------------------------------------------------------->
+
+</body>
+
+</html>
