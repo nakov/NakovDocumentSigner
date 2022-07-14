@@ -21,9 +21,8 @@ The most stable solution for signing documents with a smart card in the Web brow
 In some browsers WebCrypto API is supported. See some examples here: https://github.com/diafygi/webcrypto-examples.
 
 ## Live Demos
-
-Demonstration of digitally signing files in your Web browser with PFX certificate keystore (DigitalSignerApplet): https://nakov.com/research/documents-signing/digitalsignerapplet-demo
-Demonstration of digitally signing files in your Web browser with a smart card (SmartCardSignerApplet): https://nakov.com/research/documents-signing/smartcardsignerapplet-demo
+ - Demonstration of digitally signing files in your Web browser with PFX certificate keystore (DigitalSignerApplet): https://nakov.com/research/documents-signing/digitalsignerapplet-demo
+ - Demonstration of digitally signing files in your Web browser with a smart card (SmartCardSignerApplet): https://nakov.com/research/documents-signing/smartcardsignerapplet-demo
 
 ## More Info
 
