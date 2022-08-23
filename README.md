@@ -22,7 +22,7 @@ In some browsers **WebCrypto API** is supported. See some examples here: https:/
 
 ## Project Architecture
 
-TODO
+![image](https://user-images.githubusercontent.com/1689586/186133378-235fbe90-97ea-43a7-ac91-31e8b5817d41.png)
 
 ## Screenshots
 
