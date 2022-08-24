@@ -22,13 +22,17 @@ In some browsers **WebCrypto API** is supported. See some examples here: https:/
 
 ## Project Architecture
 
-![image](https://user-images.githubusercontent.com/1689586/186133378-235fbe90-97ea-43a7-ac91-31e8b5817d41.png)
+<img src="https://user-images.githubusercontent.com/1689586/186133378-235fbe90-97ea-43a7-ac91-31e8b5817d41.png" width="500">
 
 ## Screenshots
 
-TODO
+<img src="https://user-images.githubusercontent.com/69080997/186357933-28f646be-db1b-42ed-8748-101ace59bf29.png" width="500">
+<img src="https://user-images.githubusercontent.com/69080997/186357946-40a3c3df-d07e-4dc6-92dd-6811c947a557.png" width="600">
+<img src="https://user-images.githubusercontent.com/69080997/186357957-22130f35-7a08-4017-a0d8-60c41a9e0200.png" width="600">
 
 ## Live Demos
+<img src="https://user-images.githubusercontent.com/69080997/186360150-ffff1556-0cc1-4fee-81c5-288cfd06057a.png" width="200" align=right>
+
  - Demonstration of digitally signing files in your Web browser with PFX certificate keystore (DigitalSignerApplet): https://nakov.com/research/documents-signing/digitalsignerapplet-demo
  - Demonstration of digitally signing files in your Web browser with a smart card (SmartCardSignerApplet): https://nakov.com/research/documents-signing/smartcardsignerapplet-demo
 
